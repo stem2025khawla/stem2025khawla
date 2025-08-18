@@ -6,7 +6,7 @@
   <title> الصفات غير المندلية </title>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
   <link rel="icon" href="images/icon.png" type="image/png">
-  <style>
+ <style>
     * {
       box-sizing: border-box;
       font-family: 'Tajawal', sans-serif; 
@@ -15,15 +15,15 @@
     body {
       margin: 0;
       padding: 0;
-      padding-top: 160px; /* 100px header + ~60px nav spacing */
-      background-color: #f4f4f9;
+      padding-top: 110px;
+      background-color: #E7F3FD;
       overflow-x: hidden;
     }
 
 header {
-  background-color: #006400;
+  background-color: #0E6FC4;
   color: white;
-  padding: 1em 0;
+  padding: 0.5em 0;
   text-align: center;
   position: fixed;
   top: 0;
@@ -36,72 +36,32 @@ header {
   justify-content: center;
 }
 
-nav {
-  background-color: #228B22;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 0.5em;
-  position: fixed;
-  top: 100px; /* match header height */
-  left: 0;
-  width: 100%;
-  z-index: 999;
-}
-
-
-
-    nav a,
-.nav-current {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-}
-
-nav a:hover {
-  background-color: #006400;
-}
-
-.nav-current {
-  background-color: #006400;
-  color: #ccc;
-  cursor: default;
-}
-
 .section-card {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* force same height */
-  gap: 20px;
+  align-items: center;
+  gap: 14px;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: #E7F3FD;
   border: 1px solid #ddd;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 1000px;
-  margin: 18px auto;
+  margin: 20px auto;
 }
-
 
 
 /* Image side */
 .image-side {
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
-
 
 .image-side img {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
   transition: transform 0.3s ease;
-  margin: 0 auto;
 }
 
 .image-side img:hover {
@@ -109,20 +69,18 @@ nav a:hover {
   cursor: pointer;
 }
 
+/* Text side */
 .text-side {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* This ensures spacing from top (h2) to bottom (lesson) */
-  padding: 24px 16px;
-  background: linear-gradient(to top left, #f0fff0, #ffffff);
-  border-radius: 12px;
-  border-right: 5px solid #228B22;
-  box-shadow: inset 0 0 10px rgba(0, 100, 0, 0.05);
+  direction: rtl;
   text-align: right;
-  min-height: 180px; /* adjust as needed for consistent height */
+  padding: 20px;
+  background: linear-gradient(to top left,#E7F3FD, #ffffff);
+  border-radius: 12px;
+  border-right: 5px solid #0E6FC4;
+  box-shadow: inset 0 0 10px rgba(0, 100, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .text-side:hover {
   transform: scale(1.02);
@@ -130,18 +88,10 @@ nav a:hover {
 }
 
 .text-side h2 {
-  min-height: 40px;
-  margin-bottom: 12px;
-  color: #006400;
-  font-size: 1.1em;
-  line-height: 1.5;
-}
-
-
-.text-side p {
-  font-size: 1em;
-  color: #333;
-  line-height: 1.5;
+  color:  #0E6FC4;
+  font-size: 1.2em;
+  line-height: 1;
+  margin-bottom: 8px;
 }
 
 
@@ -174,10 +124,6 @@ nav a:hover {
   transition: transform 0.3s ease;
 }
 
-/* Initially hidden */
-/* Initial state: hidden */
-
-
 /* Text overlay styles */
 .hover-text {
   position: absolute;
@@ -185,12 +131,12 @@ nav a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.6s ease;
-  background-color: rgba(0, 100, 0, 0.8);
+  background-color:  #0E6FC4;
   padding: 10px 20px;
   border-radius: 10px;
 }
@@ -239,6 +185,7 @@ img {
       text-align: center;
     }
 
+
 /* Responsive */
 @media (max-width: 768px) {
   .section-card {
@@ -250,20 +197,11 @@ img {
     text-align: right;
   }
 
-  header, nav, main {
+  main {
     padding: 1em;
     text-align: center;
   }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .quiz-button {
-    width: 90%;
-    font-size: 1.1em;
-  }
+  
 }
 
 
@@ -273,85 +211,17 @@ img {
   }
 
   .hover-text {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
-
-
-/* Hamburger styles */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 28px;
-  height: 24px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  box-sizing: content-box;
-  margin-left: 10px;
-}
-
-.hamburger span {
-  width: 100%;
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
-  transition: all 0.3s linear;
-}
-
-/* Show hamburger only on small screens */
-@media (max-width: 768px) {
-  nav {
-    position: fixed; /* keep sticky/fixed if you want */
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5em 1em;
-    height: auto;
-    gap: 0;
-  }
-
-  nav a, nav .nav-current {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-
-  /* Hide links by default on mobile */
-  nav:not(.open) a,
-  nav:not(.open) .nav-current {
-    display: none;
-  }
-
-  /* Show hamburger */
-  .hamburger {
-    display: flex;
-  }
-}
-
-/* Hamburger animation when active */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
 
 .site-footer {
-  background-color: #006400;
+  background-color: #0E6FC4;
   color: white;
   text-align: center;
-  padding: 30px 10px;
-  font-size: 14px;
-  margin-top: 60px;
+  padding: 10px 10px;
+  font-size: 18px;
+  margin-top: 40px;
 }
 
 .footer-content {
@@ -361,44 +231,55 @@ img {
   gap: 12px;
 }
 
-.footer-logo img.dna-icon {
-  width: 60px;
-  height: 60px;
-  animation: rotateDNA 5s linear infinite;
-}
-
-/* DNA rotation animation */
-@keyframes rotateDNA {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Scroll-to-top button */
-.scroll-top {
-  margin-top: 10px;
-  background-color: #228B22;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  padding: 8px 16px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.scroll-top:hover {
-  background-color: #004d00;
-}
-
 .sections-wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
-  max-width: 1200px;
-  margin: 18px auto;
-  padding: 0 1em;
+  gap: 12px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 0.5em;
 }
+
+/* Adjust each card inside wrapper */
+.sections-wrapper .section-card {
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards in a row with 20px gap */
+  margin: 0;
+  max-width: 100%;
+}
+
+/* On tablets: 2 cards per row */
+@media (max-width: 992px) {
+  .sections-wrapper .section-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* On small screens: 1 card per row */
+@media (max-width: 600px) {
+  .sections-wrapper {
+    flex-direction: column;
+  }
+  .sections-wrapper .section-card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Force vertical stacking inside each card */
+.section-card.column-layout {
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+}
+
+.section-card.column-layout .text-side {
+  padding-top: 20px;
+  text-align: center; /* Optional: center align text on all devices */
+  border-right: none;
+  border-top: 5px solid #0E6FC4;
+}
+
+/* old */    
 
 /* Adjust each card inside wrapper */
 .sections-wrapper .section-card {
@@ -438,40 +319,9 @@ img {
   border-top: 5px solid #228B22;
 }
 
-
-.download-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #C8E6C9;
-  color: #006400;
-  font-size: 1em;
-  font-weight : bold;
-  text-decoration: none;
-  border-radius: 6px;
-  font-family: 'Tajawal', sans-serif;
-  transition: background-color 0.3s;
-}
-
-.download-button:hover {
-  background-color: #45a049;
-}
-
 .section-card.placeholder {
   visibility: hidden;
 }
-
-.header-logo-text {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.header-logo {
-  width: 60px; /* يمكنك التعديل حسب حجم الصورة */
-  height: auto;
-  border-radius: 50%; /* اختياري - يجعل الصورة دائرية */
-}
-
 
   </style>
 
