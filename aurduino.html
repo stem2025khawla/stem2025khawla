@@ -6,7 +6,7 @@
   <title> أوردوينو </title>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
   <link rel="icon" href="images/icon.png" type="image/png">
- <style>
+  <style>
     * {
       box-sizing: border-box;
       font-family: 'Tajawal', sans-serif; 
@@ -241,7 +241,12 @@ img {
   padding: 0 0.5em;
 }
 
-
+/* Adjust each card inside wrapper */
+.sections-wrapper .section-card {
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards in a row with 20px gap */
+  margin: 0;
+  max-width: 100%;
+}
 
 /* On tablets: 2 cards per row */
 @media (max-width: 992px) {
@@ -274,12 +279,14 @@ img {
   border-top: 5px solid #0E6FC4;
 }
 
+    
   </style>
 
 </head>
+  
 <body>
   
-    <header>
+  <header>
   <div class="header-logo-text">
     <h1> STEM 2025 </h1>
   </div>
@@ -290,186 +297,40 @@ img {
   <!-- Left side: Image -->
   <div class="image-side">
   <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
-   <video src="videos/testing aurduino.mp4" controls width="340"></video>
+    <a href="aurduino.html" target="_blank">
+    <img src="images/aurduino.png" alt="lab tec working on aurduino board">
+    <div class="hover-text"> اضغط هنا </div>
+    </a>
   </div>
 </div>
 
   <!-- Right side: Text -->
   <div class="text-side">
-<h2> التحكم بضوء الثنائي الباعث للضوء المثبت داخل المتحكم الدقيق الأوردوينو </h2>   
+    <h2> الأردوينو </h2>
+  </div>
 </div>
-</div>
+
 
 <div class="section-card column-layout">
   <!-- Left side: Image -->
   <div class="image-side">
   <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
-    <img src="images/lesson4.png" alt="school students performing exam">
-    <div class="hover-text"> الفصل الثاني </div>
+    <a href="edison.html" target="_blank">
+    <img src="images/edison.png" alt="lab tec working on edison robot">
+    <div class="hover-text"> اضغط هنا </div>
+    </a>
   </div>
 </div>
 
   <!-- Right side: Text -->
   <div class="text-side">
-    <h2> السيادة المشتركة </h2>
-<div class="lesson"> <a href="https://drive.google.com/file/d/1aUZJnZEdOhBVqc-ZzOD9sjr04AuflYnc/view?usp=drive_link" target="_blank" class="download-button"> PDF </a> | 
-      <a href="https://docs.google.com/presentation/d/1ZjLHlI8t1gQyzGjoWAabit2L_jadAQk6/edit?usp=drive_link&ouid=107661542810058282520&rtpof=true&sd=true" target="_blank" class="download-button"> PPTX </a></div>
-</div>
-</div>
-
-<div class="section-card column-layout">
-  <!-- Left side: Image -->
-  <div class="image-side">
-  <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
-    <img src="images/lesson4.png" alt="school students performing exam">
-    <div class="hover-text"> الفصل الثاني </div>
+    <h2> إديسون </h2>
   </div>
-</div>
-
-  <!-- Right side: Text -->
-  <div class="text-side">
-    <h2> الأليلات المتعددة </h2>
-<div class="lesson"> <a href="https://drive.google.com/file/d/1IsQ-q5tgAGC9p9-lKCbJnfSydGfnTE1e/view?usp=drive_link" target="_blank" class="download-button"> PDF</a> | 
-      <a href="https://docs.google.com/presentation/d/1RcyVldM_NMtJrJH1Dcj59kK_QV8mcJoo/edit?usp=drive_link&ouid=107661542810058282520&rtpof=true&sd=true" target="_blank" class="download-button"> PPTX </a></div>
-</div>
-</div>
-
-<div class="section-card column-layout">
-  <!-- Left side: Image -->
-  <div class="image-side">
-  <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
-    
-    <img src="images/lesson4.png" alt="school students performing exam">
-    <div class="hover-text"> الفصل الثاني </div>
-
-  </div>
-</div>
-
-  <!-- Right side: Text -->
-  <div class="text-side">
-    <h2> الجينات القاتلة </h2>
-<div class="lesson"> <a href="https://drive.google.com/file/d/1qPzDJuNIlbUd6PwExEdBnMvncmBptqUt/view?usp=drive_link" target="_blank" class="download-button"> PDF</a> | 
-      <a href="https://docs.google.com/presentation/d/1EJe_3fBB1HisHe5OnNASR8BHFE3ik6tE/edit?usp=drive_link&ouid=107661542810058282520&rtpof=true&sd=true" target="_blank" class="download-button"> PPTX </a></div>
-</div>
-</div>
-</div> <!--end of sections-wraper-->
-
-<div class="sections-wrapper">
-<div class="section-card column-layout">
-  <!-- Left side: Image -->
-  <div class="image-side">
-  <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
-    
-    <img src="images/lesson4.png" alt="school students performing exam">
-    <div class="hover-text"> الفصل الثاني </div>
-  </div>
-</div>
-
-  <!-- Right side: Text -->
-  <div class="text-side">
-    <h2> الصفات الوراثية </h2>
-<div class="lesson"> <a href="https://drive.google.com/file/d/1dIfolEkreICmKwo99UISObAMCcV5xxz_/view?usp=drive_link" target="_blank" class="download-button"> PDF</a> | 
-      <a href="https://docs.google.com/presentation/d/1rS-mpwyCl8yGcBhlWl-SfL3EIXsLmiWZ/edit?usp=drive_link&ouid=107661542810058282520&rtpof=true&sd=true" target="_blank" class="download-button"> PPTX </a></div>
-</div>
-</div>
-
-<div class="section-card column-layout">
-  <!-- Left side: Image -->
-  <div class="image-side">
-  <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
-    
-    <img src="images/lesson4.png" alt="school students performing exam">
-    <div class="hover-text"> الفصل الثاني </div>
-
-  </div>
-</div>
-
-  <!-- Right side: Text -->
-  <div class="text-side">
-    <h2> أنظمة تحديد الجنس، الصفات المرتبطة بالجنس </h2>
-<div class="lesson"> <a href="https://drive.google.com/file/d/1t4M7mWQGjLTd_bi9MJIwJWVY5UFXyKcl/view?usp=drive_link" target="_blank" class="download-button"> PDF</a> | 
-      <a href="https://docs.google.com/presentation/d/1yF6UVucPqV2Ptuuo2qvd5CkB9FGxzBdL/edit?usp=drive_link&ouid=107661542810058282520&rtpof=true&sd=true" target="_blank" class="download-button"> PPTX </a></div>
-</div>
-</div>
-
-<div class="section-card column-layout">
-  <!-- Left side: Image -->
-  <div class="image-side">
-  <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
-   
-    <img src="images/lesson4.png" alt="school students performing exam">
-    <div class="hover-text"> الفصل الثاني </div>
-
-  </div>
-</div>
-
-  <!-- Right side: Text -->
-  <div class="text-side">
-    <h2> الصفات المتأثرة بالجنس </h2>
-<div class="lesson"> <a href="https://drive.google.com/file/d/1t-LGgRfmZtDFkS7gfbjqchtLNLQo8MgG/view?usp=drive_link" target="_blank" class="download-button"> PDF</a> | 
-      <a href="https://docs.google.com/presentation/d/1RK3A6m2TMruxZYM-7yRfmCzXBgVbrxAT/edit?usp=drive_link&ouid=107661542810058282520&rtpof=true&sd=true" target="_blank" class="download-button"> PPTX </a></div>
-</div>
-</div>
-
-<div class="section-card column-layout">
-  <!-- Left side: Image -->
-  <div class="image-side">
-  <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
-    
-    <img src="images/lesson4.png" alt="school students performing exam">
-    <div class="hover-text"> الفصل الثاني </div>
-
-  </div>
-</div>
-
-  <!-- Right side: Text -->
-  <div class="text-side">
-    <h2> الارتباط و العبور </h2>
-<div class="lesson"> <a href="https://drive.google.com/file/d/1SI5OUXC4N0OH1zsiPTizWIgza4scZOTT/view?usp=drive_link" target="_blank" class="download-button"> PDF</a> | 
-      <a href="https://docs.google.com/presentation/d/18ZNOJW9GQVrNuaTyooJyG4wxTDJClF7N/edit?usp=drive_link&ouid=107661542810058282520&rtpof=true&sd=true" target="_blank" class="download-button"> PPTX </a></div>
-</div>
 </div>
 
 </div> <!--end of sections-wraper-->
 
-<div class="sections-wrapper">
-<div class="section-card column-layout">
-  <!-- Left side: Image -->
-  <div class="image-side">
-  <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
-   
-    <img src="images/lesson4.png" alt="school students performing exam">
-    <div class="hover-text"> الفصل الثاني </div>
-   
-  </div>
-</div>
 
-  <!-- Right side: Text -->
-  <div class="text-side">
-    <h2> الخرائط الجينية </h2>
- <div class="lesson"> <a href="https://drive.google.com/file/d/14v6jhqLIJNn_ojxyW3nFPOVIQB7XJRVJ/view?usp=drive_link" target="_blank" class="download-button"> PDF</a> | 
-      <a href="https://docs.google.com/presentation/d/1Dg1Mg421s35GGY8k9hvxYBMQqhfFZbkX/edit?usp=drive_link&ouid=107661542810058282520&rtpof=true&sd=true" target="_blank" class="download-button"> PPTX </a></div>
-</div>
-</div>
-
-<div class="section-card column-layout">
-  <!-- Left side: Image -->
-  <div class="image-side">
-  <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
-    
-    <img src="images/lesson4.png" alt="school students performing exam">
-    <div class="hover-text"> الفصل الثاني </div>
-
-  </div>
-</div>
-
-  <!-- Right side: Text -->
-  <div class="text-side">
-    <h2> الاختلالات الوراثية </h2>
-<div class="lesson"> <a href="https://drive.google.com/file/d/12kTghhUIm3lELA4vG0G6oJTz6Zq8RynP/view?usp=drive_link" target="_blank" class="download-button"> PDF</a> | 
-      <a href="https://docs.google.com/presentation/d/1_pmOrusUUi8ikNXFlsuFVf7i02hyhaq4/edit?usp=drive_link&ouid=107661542810058282520&rtpof=true&sd=true" target="_blank" class="download-button"> PPTX </a></div>
-  </div>
-</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -534,13 +395,6 @@ const nav = document.querySelector('nav');
     hamburger.setAttribute('aria-expanded', expanded);
   });
 
-function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-
 </script>
 
 <footer class="site-footer">
@@ -555,5 +409,5 @@ function scrollToTop() {
 
 
 </body>
-</html>
 
+</html>
