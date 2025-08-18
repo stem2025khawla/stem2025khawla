@@ -1,1 +1,598 @@
-hello
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> مكتبة ستيم 2025 مدرسة خولة بنت الأزور </title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/icon.png" type="image/png">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Tajawal', sans-serif; 
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      padding-top: 160px; /* 100px header + ~60px nav spacing */
+      background-color: #f4f4f9;
+      overflow-x: hidden;
+    }
+
+header {
+  background-color: #006400;
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 100px; /* adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  background-color: #228B22;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0.5em;
+  position: fixed;
+  top: 100px; /* match header height */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+
+
+    nav a,
+.nav-current {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #006400;
+}
+
+.nav-current {
+  background-color: #006400;
+  color: #ccc;
+  cursor: default;
+}
+
+.section-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+
+/* Image side */
+.image-side {
+  flex: 1;
+  text-align: center;
+}
+
+.image-side img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.image-side img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Text side */
+.text-side {
+  flex: 1;
+  direction: rtl;
+  text-align: right;
+  padding: 20px;
+  background: linear-gradient(to top left, #f0fff0, #ffffff);
+  border-radius: 12px;
+  border-right: 5px solid #228B22;
+  box-shadow: inset 0 0 10px rgba(0, 100, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-side:hover {
+  transform: scale(1.02);
+  box-shadow: inset 0 0 15px rgba(0, 128, 0, 0.1);
+}
+
+.text-side h2 {
+  color: #006400;
+  font-size: 1.2em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+
+/* Initial hidden state */
+.image-text-wrapper {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible state */
+.image-text-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Container for image and overlay */
+.image-hover-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* The image itself */
+.image-hover-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Initially hidden */
+/* Initial state: hidden */
+
+
+/* Text overlay styles */
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  background-color: rgba(0, 100, 0, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Show on hover (desktop) */
+.image-hover-wrapper:hover .hover-text {
+  opacity: 1;
+}
+
+/* Show when scrolled into view */
+.image-hover-wrapper.scroll-visible .hover-text {
+  opacity: 1;
+}
+
+/* Hide after timeout */
+.image-hover-wrapper .hover-text.fade-out {
+  opacity: 0;
+}
+
+
+/* Hover effect: zoom image and show text */
+.image-hover-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.image-hover-wrapper:hover .hover-text {
+  opacity: 1;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+    main {
+      padding: 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #006400;
+      text-align: center;
+    }
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-side {
+    text-align: right;
+  }
+
+  header, nav, main {
+    padding: 1em;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quiz-button {
+    width: 90%;
+    font-size: 1.1em;
+  }
+}
+
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .hover-text {
+    font-size: 18px;
+  }
+}
+
+
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: content-box;
+  margin-left: 10px;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+}
+
+/* Show hamburger only on small screens */
+@media (max-width: 768px) {
+  nav {
+    position: fixed; /* keep sticky/fixed if you want */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5em 1em;
+    height: auto;
+    gap: 0;
+  }
+
+  nav a, nav .nav-current {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  /* Hide links by default on mobile */
+  nav:not(.open) a,
+  nav:not(.open) .nav-current {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+.site-footer {
+  background-color: #006400;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo img.dna-icon {
+  width: 60px;
+  height: 60px;
+  animation: rotateDNA 5s linear infinite;
+}
+
+/* DNA rotation animation */
+@keyframes rotateDNA {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Scroll-to-top button */
+.scroll-top {
+  margin-top: 10px;
+  background-color: #228B22;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-top:hover {
+  background-color: #004d00;
+}
+
+.sections-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 0.5em;
+}
+
+/* Adjust each card inside wrapper */
+.sections-wrapper .section-card {
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards in a row with 20px gap */
+  margin: 0;
+  max-width: 100%;
+}
+
+/* On tablets: 2 cards per row */
+@media (max-width: 992px) {
+  .sections-wrapper .section-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* On small screens: 1 card per row */
+@media (max-width: 600px) {
+  .sections-wrapper {
+    flex-direction: column;
+  }
+  .sections-wrapper .section-card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Force vertical stacking inside each card */
+.section-card.column-layout {
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+}
+
+.section-card.column-layout .text-side {
+  padding-top: 20px;
+  text-align: center; /* Optional: center align text on all devices */
+  border-right: none;
+  border-top: 5px solid #228B22;
+}
+
+.header-logo-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  width: 60px; /* يمكنك التعديل حسب حجم الصورة */
+  height: auto;
+  border-radius: 50%; /* اختياري - يجعل الصورة دائرية */
+}
+
+
+    
+  </style>
+
+</head>
+  
+<body>
+  
+  <header>
+  <div class="header-logo-text">
+    <img src="images/icon.png" alt="شعار أقحوان" class="header-logo">
+    <h1> أُقْحُوان </h1>
+  </div>
+</header>
+  
+  <nav>
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <span class="nav-current"> الصف الثاني عشر العلمي </span>
+  <a href="index.html" target="_blank">الرئيسية</a>
+  <a href="11th grade Interface.html" target="_blank"> الصف الحادي عشر العلمي</a>
+  <a href="10th grade Interface.html" target="_blank">الصف العاشر</a>
+</nav>
+
+<div class="sections-wrapper">
+<div class="section-card column-layout">
+  <!-- Left side: Image -->
+  <div class="image-side">
+  <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
+    <a href="12th grade unit3 interface.html" target="_blank">
+    <img src="images/semester.png" alt="biology book with fungi, DNA, and plant illustrations">
+    <div class="hover-text"> اضغط هنا </div>
+    </a>
+  </div>
+</div>
+
+  <!-- Right side: Text -->
+  <div class="text-side">
+    <h2> الوحدة الثالثة : أجهزة جسم الإنسان </h2>
+  </div>
+</div>
+
+
+<div class="section-card column-layout">
+  <!-- Left side: Image -->
+  <div class="image-side">
+  <div class="image-hover-wrapper" onclick="this.classList.toggle('active')">
+    <a href="12th grade unit4 interface.html" target="_blank">
+    <img src="images/semester.png" alt="biology book with fungi, DNA, and plant illustrations">
+    <div class="hover-text"> اضغط هنا </div>
+    </a>
+  </div>
+</div>
+
+  <!-- Right side: Text -->
+  <div class="text-side">
+    <h2> الوحدة الرابعة : الكائنات الدقيقة </h2>
+  </div>
+</div>
+
+</div> <!--end of sections-wraper-->
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.section-card');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    cards.forEach(card => observer.observe(card));
+  });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const hoverWrappers = document.querySelectorAll('.image-hover-wrapper');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const wrapper = entry.target;
+          const overlay = wrapper.querySelector('.hover-text');
+
+          wrapper.classList.add('scroll-visible');
+
+          // Remove any previous fade-out
+          overlay.classList.remove('fade-out');
+
+          // Start timer to fade out
+          setTimeout(() => {
+            overlay.classList.add('fade-out');
+          }, 1000); // 1000ms = 1 seconds
+
+          observer.unobserve(wrapper); // optional: animate once
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    hoverWrappers.forEach(wrapper => {
+      observer.observe(wrapper);
+    });
+  });
+
+const nav = document.querySelector('nav');
+  const hamburger = document.querySelector('.hamburger');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('open');
+
+    // Update aria-expanded for accessibility
+    const expanded = hamburger.classList.contains('active');
+    hamburger.setAttribute('aria-expanded', expanded);
+  });
+
+function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+</script>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="images/icon.png" alt="DNA Icon" class="dna-icon">
+    </div>
+    <div class="footer-text">
+      <p> جميع الحقوق محفوظة © أُقْحُوان 2025 </p>
+    </div>
+    <button class="scroll-top" onclick="scrollToTop()">↑ أعلى</button>
+  </div>
+</footer>
+
+
+</body>
+
+</html>
+
+
+
+
