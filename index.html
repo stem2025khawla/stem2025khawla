@@ -263,74 +263,6 @@ img {
   }
 }
 
-
-/* Hamburger styles */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 28px;
-  height: 24px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  box-sizing: content-box;
-  margin-left: 10px;
-}
-
-.hamburger span {
-  width: 100%;
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
-  transition: all 0.3s linear;
-}
-
-/* Show hamburger only on small screens */
-@media (max-width: 768px) {
-  nav {
-    position: fixed; /* keep sticky/fixed if you want */
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5em 1em;
-    height: auto;
-    gap: 0;
-  }
-
-  nav a, nav .nav-current {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-
-  /* Hide links by default on mobile */
-  nav:not(.open) a,
-  nav:not(.open) .nav-current {
-    display: none;
-  }
-
-  /* Show hamburger */
-  .hamburger {
-    display: flex;
-  }
-}
-
-/* Hamburger animation when active */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-
 .site-footer {
   background-color: #006400;
   color: white;
@@ -446,23 +378,9 @@ img {
   
   <header>
   <div class="header-logo-text">
-    <img src="images/icon.png" alt="شعار أقحوان" class="header-logo">
-    <h1> أُقْحُوان </h1>
+    <h1> STEM 2025 </h1>
   </div>
 </header>
-  
-  <nav>
-  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <span class="nav-current"> الصف الثاني عشر العلمي </span>
-  <a href="index.html" target="_blank">الرئيسية</a>
-  <a href="11th grade Interface.html" target="_blank"> الصف الحادي عشر العلمي</a>
-  <a href="10th grade Interface.html" target="_blank">الصف العاشر</a>
-</nav>
 
 <div class="sections-wrapper">
 <div class="section-card column-layout">
@@ -478,7 +396,7 @@ img {
 
   <!-- Right side: Text -->
   <div class="text-side">
-    <h2> الوحدة الثالثة : أجهزة جسم الإنسان </h2>
+    <h2> الأردوينو </h2>
   </div>
 </div>
 
@@ -496,7 +414,7 @@ img {
 
   <!-- Right side: Text -->
   <div class="text-side">
-    <h2> الوحدة الرابعة : الكائنات الدقيقة </h2>
+    <h2> إديسون </h2>
   </div>
 </div>
 
@@ -582,7 +500,7 @@ function scrollToTop() {
       <img src="images/icon.png" alt="DNA Icon" class="dna-icon">
     </div>
     <div class="footer-text">
-      <p> جميع الحقوق محفوظة © أُقْحُوان 2025 </p>
+      <p> مدرسة خولة بنت الأزور الأساسية للبنات </p>
     </div>
     <button class="scroll-top" onclick="scrollToTop()">↑ أعلى</button>
   </div>
